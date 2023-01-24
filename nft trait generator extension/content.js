@@ -25,8 +25,12 @@ chrome.runtime.onMessage.addListener(
             openSeaStats(gcpResponse1_1, request, sender, sendResponse);
 
         } else if (request.myMessage === "urlImgButton") {
-            console.log("my img_url")
-            img_url_config2(gcpResponse1_1, request, sender, sendResponse);
+            console.log("my img_url<-")
+            //gcpResponse1_1 = img_url_config2(gcpResponse1_1, request, sender, sendResponse);
+            img_url_config2(request, sender, sendResponse);
+            console.log('new gcpResponse1_1');
+            console.log(gcpResponse1_1);
+
 
         } else {
             console.log("I'm at the else of the menu if DUDE!")
@@ -42,7 +46,12 @@ function openSeaProperties(gcpResponse1_1, request, sender, sendResponse) {
         var htmlTableList = t.getElementsByTagName("tr");
         var noOfRowsOnTableClient = (htmlTableList.length) - 1;
         //const jsonParsed = JSON.parse(gcpResponse1);
-        const jsonParsed = JSON.parse(gcpResponse1_1);
+        try{ //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
+            jsonParsed = JSON.parse(gcpResponse1_1);
+        }catch{
+            //api RESPONSE
+            jsonParsed = gcpResponse1_1
+        }
         console.log("LOG HERE -><-")
         console.log(jsonParsed["responses"][0].labelAnnotations);
         console.log(jsonParsed["responses"][0].labelAnnotations[0].description);
@@ -78,7 +87,15 @@ function openSeaLevels(gcpResponse1_1, request, sender, sendResponse) {
         var htmlTableList = t.getElementsByTagName("tr");
         var noOfRowsOnTableClient = (htmlTableList.length) - 1;
         //const jsonParsed = JSON.parse(gcpResponse1);
-        const jsonParsed = JSON.parse(gcpResponse1_1);
+        console.log('newest gcpResponse1_1')
+        console.log(gcpResponse1_1)
+        try{ //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
+            jsonParsed = JSON.parse(gcpResponse1_1);
+        }catch{
+            //api RESPONSE
+            jsonParsed = gcpResponse1_1
+        }
+        
         console.log("LOG HERE -><-")
         console.log(jsonParsed["responses"][0].labelAnnotations);
         console.log(jsonParsed["responses"][0].labelAnnotations[0].description);
@@ -120,7 +137,12 @@ function openSeaStats(gcpResponse1_1, request, sender, sendResponse) {
         var htmlTableList = t.getElementsByTagName("tr");
         var noOfRowsOnTableClient = (htmlTableList.length) - 1;
         //const jsonParsed = JSON.parse(gcpResponse1);
-        const jsonParsed = JSON.parse(gcpResponse1_1);
+        try{ //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
+            jsonParsed = JSON.parse(gcpResponse1_1);
+        }catch{
+            //api RESPONSE
+            jsonParsed = gcpResponse1_1
+        }
 
         var colorList = [];
         percentageList = [];
@@ -173,7 +195,7 @@ function openSeaStats(gcpResponse1_1, request, sender, sendResponse) {
             //console.log(jsonParsed.Gas);
             //quickstart();
         };
-        enrique2();
+        //enrique2();
         sendResponse({ status: "Success!" });
     } catch (error) {
         console.log(error)
@@ -191,7 +213,7 @@ function rgbToHex(r, g, b) {
     return "colorRatio:#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-async function img_url_config2(gcpResponse1_1, request, sender, sendResponse) {
+async function img_url_config2(request, sender, sendResponse) {
     console.log('img_url_config2');
     console.log(request.myMessage);
     console.log(request.urlImg);
@@ -226,8 +248,11 @@ async function img_url_config2(gcpResponse1_1, request, sender, sendResponse) {
         }
 
         //THIS IS YOUR RETuRN
+        console.log("Esto es lo que estamos pasando!");
         console.log(jsonGCPresponse);
+        gcpResponse1_1 = jsonGCPresponse;
         console.log('End while');
+        //return jsonGCPresponse;
     }else{
         console.log('Not issue on the first call');
     }
