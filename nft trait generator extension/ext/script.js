@@ -46,24 +46,44 @@ document.getElementById("auto-fillStats").addEventListener("click", () => {
 	});
 });
 
+//
 document.getElementById("urlImgButton").addEventListener("click", () => {
 	/* Auto fill form */
 	console.log(document.getElementById('urlImgCheckValue').value);
+	document.getElementById("appImage").src="../assets/waitTIme.gif";
+	var newIMGURL = document.getElementById('urlImgCheckValue').value
+	document.getElementById("pStatus").innerHTML = "Getting image .. (This can take a minute)";
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-		chrome.tabs.sendMessage(tabs[0].id, {
+		 chrome.tabs.sendMessage(tabs[0].id, {
 			myMessage: "urlImgButton",
-			urlImg: document.getElementById('urlImgCheckValue').value
+			urlImg: newIMGURL
 			//type: document.getElementById('type').value,
 			//name: document.getElementById('name').value
 
 
 		}, function (response) {
+			console.log('Here!');
 			console.log(response);
-			chrome.runtime.lastError;
+			try{
+				if (response.status == "END_IMG_GET"){
+					console.log('Her2e!');
+					document.getElementById("appImage").src= newIMGURL;
+					document.getElementById("pStatus").innerHTML = "<b>Done!</b>, Image loaded";
+					document.getElementById('urlImgCheck').click();
+					chrome.storage.sync.set({ "imgSRC": newIMGURL }, function(){
+						//  A data saved callback omg so fancy
+					});
+				}
+			}catch(error){
+				alert("NO URL SET");
+			}
+			//chrome.runtime.lastError;
 			//console.log('somethingwent wrong@');
 		});
 	});
 });
+//BUENA
+
 
 checkbox = document.getElementById("urlImgCheck");
 checkbox.addEventListener('change', function() {
@@ -76,8 +96,6 @@ checkbox.addEventListener('change', function() {
 	document.getElementById("urlImgCheckValue").style.display = 'none';
   	document.getElementById("urlImgButton").style.display = 'none';}
 });
-
-
 
 
 // var checkbox = document.getElementById("urlImgCheck");

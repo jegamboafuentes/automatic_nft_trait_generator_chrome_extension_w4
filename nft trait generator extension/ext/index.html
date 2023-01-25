@@ -10,37 +10,43 @@
         <h3 class="float-md-start mb-0" style="text-align: center; margin: 20px;">Automatic NFT trait generator</h3>
     </header>
 
+    <div style="text-align: center; margin-top: 70px; margin-bottom:10px">
+
+        <img src="../assets/project.png" alt="projectLogo" id="appImage" width="66" height="66">
+        <p id="pStatus">Load Image URL</p>
+    </div>
+
+    <p>IMG URL:</p>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox" id="urlImgCheck" name="urlImgCheck"
+                    aria-label="Checkbox for following text input" checked>
+            </div>
+        </div>
+        <input id="urlImgCheckValue" type="text" class="form-control" aria-label="Text input with checkbox"
+            value="https://i.seadn.io/gae/ASS8U5tQVrdwpKzeSRZCoho7oxhFnIHjDjXygRDNsDvPPmhaTE4bGDd7wHYPXqtXmZkAFhPmnLoxKOv00Kcjybpkdr-qtv9FlvvZVFo?auto=format&w=1920">
+        <button class="btn btn-primary" id="urlImgButton">Save</button>
+    </div>
+    <hr>
+
     <div style="margin-top: 50px; margin-left: 10px; margin-right: 10px;">
         <!-- Buttons -->
         <div style="text-align: center; margin-top: 70px; margin-bottom:10px">
             <!-- Auto fill Properties -->
             <!-- Properties -->
-            <h4 class="float-md-start mb-0" style="text-align: center; margin: 20px;">OpenSea</h4>
-            <button class="btn btn-primary" id="auto-fillProperties">Properties</button>
+            <!-- <h4 class="float-md-start mb-0" style="text-align: center; margin: 20px;">OpenSea</h4> -->
+            <img src="../assets/OpenSea-Full-Logo-Dark.png" alt="openseaLogo" height="66">
+            <br>
+            <button class="btn btn-info" id="auto-fillProperties">Properties</button>
             <!-- Levels -->
-            <button class="btn btn-primary" id="auto-fillLevels">Levels</button>
+            <button class="btn btn-info" id="auto-fillLevels">Levels</button>
             <!-- Stats -->
-            <button class="btn btn-primary" id="auto-fillStats">Stats</button>
+            <button class="btn btn-info" id="auto-fillStats">Stats</button>
         </div>
 
 
         <!-- Input fields -->
-        <div style="text-align: center; margin-top: 70px; margin-bottom:10px">
-
-            <img src="../assets/project.png" alt="projectLogo" id="appImage" width="66" height="66">
-        </div>
-
-        <p>IMG URL:</p>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="checkbox" id="urlImgCheck" name="urlImgCheck" aria-label="Checkbox for following text input" checked  >
-                </div>
-            </div>
-            <input id="urlImgCheckValue" type="text" class="form-control" aria-label="Text input with checkbox" value="https://i.seadn.io/gae/ASS8U5tQVrdwpKzeSRZCoho7oxhFnIHjDjXygRDNsDvPPmhaTE4bGDd7wHYPXqtXmZkAFhPmnLoxKOv00Kcjybpkdr-qtv9FlvvZVFo?auto=format&w=1920">
-            <button class="btn btn-primary" id="urlImgButton">Save</button>
-        </div>
-
         <p>Custom fields:</p>
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text text-primary" id="inputGroup-sizing-sm">Custom 1</span>
@@ -63,7 +69,7 @@
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text text-info" id="inputGroup-sizing-sm">Custom 2 value 2</span>
             <input type="text" id="custom2Val" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm" value="Vqgan+clip">
+                aria-describedby="inputGroup-sizing-sm" value="Dalle 2">
         </div>
 
         <div style="margin: 10px; color: white">

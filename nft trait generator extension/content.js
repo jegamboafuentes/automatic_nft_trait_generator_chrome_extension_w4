@@ -7,7 +7,8 @@
 //gcpResponse1_1 = '{"responses":[{"labelAnnotations":[{"mid":"/m/0jjw","description":"Art","score":0.85299236,"topicality":0.85299236},{"mid":"/m/0215n","description":"Cartoon","score":0.8346728,"topicality":0.8346728},{"mid":"/m/05y4t","description":"Paint","score":0.82975245,"topicality":0.82975245},{"mid":"/m/05qdh","description":"Painting","score":0.8284733,"topicality":0.8284733},{"mid":"/m/03gq5hm","description":"Font","score":0.82679576,"topicality":0.82679576},{"mid":"/m/050h26","description":"Drinkware","score":0.7871997,"topicality":0.7871997},{"mid":"/m/02h7lkt","description":"Fictional character","score":0.75279224,"topicality":0.75279224},{"mid":"/m/018ktp","description":"Watercolor paint","score":0.74170995,"topicality":0.74170995},{"mid":"/m/01kr8f","description":"Illustration","score":0.74134886,"topicality":0.74134886},{"mid":"/m/0p9xx","description":"Visual arts","score":0.70439774,"topicality":0.70439774},{"mid":"/m/02csf","description":"Drawing","score":0.7002028,"topicality":0.7002028}],"imagePropertiesAnnotation":{"dominantColors":{"colors":[{"color":{"red":132,"green":163,"blue":121},"score":0.06263738,"pixelFraction":0.06156632},{"color":{"red":62,"green":91,"blue":55},"score":0.060009915,"pixelFraction":0.032996327},{"color":{"red":14,"green":14,"blue":5},"score":0.01207224,"pixelFraction":0.021930486},{"color":{"red":29,"green":58,"blue":24},"score":0.056629706,"pixelFraction":0.030179568},{"color":{"red":98,"green":128,"blue":90},"score":0.055975854,"pixelFraction":0.039434638},{"color":{"red":72,"green":130,"blue":86},"score":0.055919044,"pixelFraction":0.038981944},{"color":{"red":40,"green":95,"blue":52},"score":0.04294412,"pixelFraction":0.01891253},{"color":{"red":104,"green":167,"blue":122},"score":0.03810221,"pixelFraction":0.039384335},{"color":{"red":51,"green":94,"blue":79},"score":0.035662692,"pixelFraction":0.017051456},{"color":{"red":165,"green":201,"blue":161},"score":0.035258833,"pixelFraction":0.048387907}]}},"cropHintsAnnotation":{"cropHints":[{"boundingPoly":{"vertices":[{"x":184},{"x":596},{"x":596,"y":735},{"x":184,"y":735}]},"confidence":0.8125,"importanceFraction":0.71680003}]}}]}' 
 //gcpResponse1_1 = '{"responses":[{"labelAnnotations":[{"mid":"/m/071j9r","description":"Cool","score":0.81464124,"topicality":0.81464124},{"mid":"/m/0jjw","description":"Art","score":0.80103076,"topicality":0.80103076},{"mid":"/m/02h7lkt","description":"Fictional character","score":0.74187475,"topicality":0.74187475},{"mid":"/m/081pkj","description":"Event","score":0.7301378,"topicality":0.7301378},{"mid":"/m/03gq5hm","description":"Font","score":0.718375,"topicality":0.718375},{"mid":"/m/034wh","description":"Graffiti","score":0.7126146,"topicality":0.7126146},{"mid":"/m/0n1h","description":"Artist","score":0.702277,"topicality":0.702277},{"mid":"/m/011s0","description":"Advertising","score":0.6812067,"topicality":0.6812067},{"mid":"/m/01sdv7","description":"Vest","score":0.6804516,"topicality":0.6804516},{"mid":"/m/0250x","description":"Costume","score":0.670132,"topicality":0.670132},{"mid":"/m/01n32","description":"City","score":0.6436526,"topicality":0.6436526}],"imagePropertiesAnnotation":{"dominantColors":{"colors":[{"color":{"red":98,"green":23,"blue":27},"score":0.061303522,"pixelFraction":0.025602333},{"color":{"red":181,"green":94,"blue":93},"score":0.0498058,"pixelFraction":0.017453851},{"color":{"red":41,"green":8,"blue":14},"score":0.037980307,"pixelFraction":0.036567576},{"color":{"red":46,"green":91,"blue":80},"score":0.006516687,"pixelFraction":0.0063880086},{"color":{"red":64,"green":172,"blue":150},"score":0.005948879,"pixelFraction":0.0025652633},{"color":{"red":247,"green":232,"blue":195},"score":0.004106225,"pixelFraction":0.012172426},{"color":{"red":7,"green":44,"blue":160},"score":0.0018048475,"pixelFraction":0.00065389066},{"color":{"red":127,"green":42,"blue":162},"score":0.0007994696,"pixelFraction":0.0010059857},{"color":{"red":141,"green":59,"blue":60},"score":0.043807715,"pixelFraction":0.019868216},{"color":{"red":200,"green":80,"blue":93},"score":0.036949776,"pixelFraction":0.0065389066}]}},"cropHintsAnnotation":{"cropHints":[{"boundingPoly":{"vertices":[{"y":36},{"x":735,"y":36},{"x":735,"y":452},{"y":452}]},"confidence":0.84375006,"importanceFraction":0.6953499}]}}]}'
 //gcpResponse1_1='{"responses":[{"labelAnnotations":[{"mid":"/m/01bqvp","description":"Sky","score":0.93556726,"topicality":0.93556726},{"mid":"/m/09nm_","description":"World","score":0.9272045,"topicality":0.9272045},{"mid":"/m/05h0n","description":"Nature","score":0.9011808,"topicality":0.9011808},{"mid":"/m/01fdzj","description":"Tower","score":0.87927467,"topicality":0.87927467},{"mid":"/m/05y4t","description":"Paint","score":0.8676156,"topicality":0.8676156},{"mid":"/m/0csby","description":"Cloud","score":0.83290946,"topicality":0.83290946},{"mid":"/m/05qdh","description":"Painting","score":0.82723516,"topicality":0.82723516},{"mid":"/m/0jjw","description":"Art","score":0.8224375,"topicality":0.8224375},{"mid":"/m/07j7r","description":"Tree","score":0.8217504,"topicality":0.8217504},{"mid":"/m/09qqq","description":"Wall","score":0.80896705,"topicality":0.80896705},{"mid":"/m/05s2s","description":"Plant","score":0.8079503,"topicality":0.8079503}],"imagePropertiesAnnotation":{"dominantColors":{"colors":[{"color":{"red":137,"green":149,"blue":174},"score":0.15738761,"pixelFraction":0.07464413},{"color":{"red":131,"green":111,"blue":147},"score":0.10231663,"pixelFraction":0.035159197},{"color":{"red":53,"green":57,"blue":59},"score":0.045697134,"pixelFraction":0.034656204},{"color":{"red":34,"green":55,"blue":30},"score":0.013412034,"pixelFraction":0.010462251},{"color":{"red":114,"green":124,"blue":149},"score":0.07157818,"pixelFraction":0.06453398},{"color":{"red":146,"green":153,"blue":159},"score":0.068469934,"pixelFraction":0.08495548},{"color":{"red":106,"green":82,"blue":119},"score":0.059076898,"pixelFraction":0.028821487},{"color":{"red":77,"green":81,"blue":82},"score":0.04272654,"pixelFraction":0.04064182},{"color":{"red":121,"green":121,"blue":124},"score":0.04099567,"pixelFraction":0.07348725},{"color":{"red":152,"green":138,"blue":175},"score":0.026460946,"pixelFraction":0.0052311253}]}},"cropHintsAnnotation":{"cropHints":[{"boundingPoly":{"vertices":[{"y":257},{"x":735,"y":257},{"x":735,"y":673},{"y":673}]},"confidence":0.7076543,"importanceFraction":0.98888886}]}}]}'
-gcpResponse1_1 = '{"responses":[{"labelAnnotations":[{"mid":"/m/04k84","description":"Light","score":0.91189146,"topicality":0.91189146},{"mid":"/m/08g_yr","description":"Temple","score":0.8750178,"topicality":0.8750178},{"mid":"/m/0cgh4","description":"Building","score":0.86225945,"topicality":0.86225945},{"mid":"/m/0jjw","description":"Art","score":0.79283696,"topicality":0.79283696},{"mid":"/m/01x314","description":"Facade","score":0.7551649,"topicality":0.7551649},{"mid":"/m/012ww9","description":"Archaeological site","score":0.74931914,"topicality":0.74931914},{"mid":"/m/02ljgl","description":"Monument","score":0.7383,"topicality":0.7383},{"mid":"/m/06msq","description":"Sculpture","score":0.73154217,"topicality":0.73154217},{"mid":"/m/01bqvp","description":"Sky","score":0.69652784,"topicality":0.69652784},{"mid":"/m/0djmp","description":"Ancient history","score":0.69496,"topicality":0.69496},{"mid":"/m/065zs54","description":"Holy places","score":0.68172055,"topicality":0.68172055}],"imagePropertiesAnnotation":{"dominantColors":{"colors":[{"color":{"red":100,"green":80,"blue":59},"score":0.14119767,"pixelFraction":0.124015905},{"color":{"red":184,"green":151,"blue":97},"score":0.13558964,"pixelFraction":0.028406786},{"color":{"red":192,"green":139,"blue":68},"score":0.0057008546,"pixelFraction":0.0021102184},{"color":{"red":219,"green":187,"blue":127},"score":0.12746271,"pixelFraction":0.02499797},{"color":{"red":135,"green":116,"blue":91},"score":0.12615733,"pixelFraction":0.11719828},{"color":{"red":170,"green":150,"blue":124},"score":0.089180596,"pixelFraction":0.072883695},{"color":{"red":151,"green":118,"blue":71},"score":0.0763483,"pixelFraction":0.0159078},{"color":{"red":69,"green":52,"blue":33},"score":0.057169795,"pixelFraction":0.08035062},{"color":{"red":248,"green":222,"blue":165},"score":0.051068638,"pixelFraction":0.01412223},{"color":{"red":149,"green":107,"blue":53},"score":0.036291853,"pixelFraction":0.0086031975}]}},"cropHintsAnnotation":{"cropHints":[{"boundingPoly":{"vertices":[{"y":55},{"x":255,"y":55},{"x":255,"y":200},{"y":200}]},"confidence":0.875,"importanceFraction":0.9039547}]}}]}'
+//gcpResponse1_1 = '{"responses":[{"labelAnnotations":[{"mid":"/m/04k84","description":"Light","score":0.91189146,"topicality":0.91189146},{"mid":"/m/08g_yr","description":"Temple","score":0.8750178,"topicality":0.8750178},{"mid":"/m/0cgh4","description":"Building","score":0.86225945,"topicality":0.86225945},{"mid":"/m/0jjw","description":"Art","score":0.79283696,"topicality":0.79283696},{"mid":"/m/01x314","description":"Facade","score":0.7551649,"topicality":0.7551649},{"mid":"/m/012ww9","description":"Archaeological site","score":0.74931914,"topicality":0.74931914},{"mid":"/m/02ljgl","description":"Monument","score":0.7383,"topicality":0.7383},{"mid":"/m/06msq","description":"Sculpture","score":0.73154217,"topicality":0.73154217},{"mid":"/m/01bqvp","description":"Sky","score":0.69652784,"topicality":0.69652784},{"mid":"/m/0djmp","description":"Ancient history","score":0.69496,"topicality":0.69496},{"mid":"/m/065zs54","description":"Holy places","score":0.68172055,"topicality":0.68172055}],"imagePropertiesAnnotation":{"dominantColors":{"colors":[{"color":{"red":100,"green":80,"blue":59},"score":0.14119767,"pixelFraction":0.124015905},{"color":{"red":184,"green":151,"blue":97},"score":0.13558964,"pixelFraction":0.028406786},{"color":{"red":192,"green":139,"blue":68},"score":0.0057008546,"pixelFraction":0.0021102184},{"color":{"red":219,"green":187,"blue":127},"score":0.12746271,"pixelFraction":0.02499797},{"color":{"red":135,"green":116,"blue":91},"score":0.12615733,"pixelFraction":0.11719828},{"color":{"red":170,"green":150,"blue":124},"score":0.089180596,"pixelFraction":0.072883695},{"color":{"red":151,"green":118,"blue":71},"score":0.0763483,"pixelFraction":0.0159078},{"color":{"red":69,"green":52,"blue":33},"score":0.057169795,"pixelFraction":0.08035062},{"color":{"red":248,"green":222,"blue":165},"score":0.051068638,"pixelFraction":0.01412223},{"color":{"red":149,"green":107,"blue":53},"score":0.036291853,"pixelFraction":0.0086031975}]}},"cropHintsAnnotation":{"cropHints":[{"boundingPoly":{"vertices":[{"y":55},{"x":255,"y":55},{"x":255,"y":200},{"y":200}]},"confidence":0.875,"importanceFraction":0.9039547}]}}]}'
+gcpResponse1_1 = "";
 
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
@@ -26,8 +27,8 @@ chrome.runtime.onMessage.addListener(
 
         } else if (request.myMessage === "urlImgButton") {
             console.log("my img_url<-")
-            //gcpResponse1_1 = img_url_config2(gcpResponse1_1, request, sender, sendResponse);
             img_url_config2(request, sender, sendResponse);
+            //sendResponse({ status2: "YO!" });
             console.log('new gcpResponse1_1');
             console.log(gcpResponse1_1);
 
@@ -36,7 +37,7 @@ chrome.runtime.onMessage.addListener(
             console.log("I'm at the else of the menu if DUDE!")
 
         }
-        //openSeaLevels(request, sender, sendResponse);
+        return true;
     }
 );
 
@@ -46,9 +47,9 @@ function openSeaProperties(gcpResponse1_1, request, sender, sendResponse) {
         var htmlTableList = t.getElementsByTagName("tr");
         var noOfRowsOnTableClient = (htmlTableList.length) - 1;
         //const jsonParsed = JSON.parse(gcpResponse1);
-        try{ //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
+        try { //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
             jsonParsed = JSON.parse(gcpResponse1_1);
-        }catch{
+        } catch {
             //api RESPONSE
             jsonParsed = gcpResponse1_1
         }
@@ -89,13 +90,13 @@ function openSeaLevels(gcpResponse1_1, request, sender, sendResponse) {
         //const jsonParsed = JSON.parse(gcpResponse1);
         console.log('newest gcpResponse1_1')
         console.log(gcpResponse1_1)
-        try{ //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
+        try { //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
             jsonParsed = JSON.parse(gcpResponse1_1);
-        }catch{
+        } catch {
             //api RESPONSE
             jsonParsed = gcpResponse1_1
         }
-        
+
         console.log("LOG HERE -><-")
         console.log(jsonParsed["responses"][0].labelAnnotations);
         console.log(jsonParsed["responses"][0].labelAnnotations[0].description);
@@ -137,9 +138,9 @@ function openSeaStats(gcpResponse1_1, request, sender, sendResponse) {
         var htmlTableList = t.getElementsByTagName("tr");
         var noOfRowsOnTableClient = (htmlTableList.length) - 1;
         //const jsonParsed = JSON.parse(gcpResponse1);
-        try{ //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
+        try { //TRY/CATCH TO HANDLE INPUT DEFAULT VALUE VS api RESPONSE 
             jsonParsed = JSON.parse(gcpResponse1_1);
-        }catch{
+        } catch {
             //api RESPONSE
             jsonParsed = gcpResponse1_1
         }
@@ -214,51 +215,61 @@ function rgbToHex(r, g, b) {
 }
 
 async function img_url_config2(request, sender, sendResponse) {
-    console.log('img_url_config2');
-    console.log(request.myMessage);
-    console.log(request.urlImg);
-    gcpResults = ""
-    var jsonGCPresponse = await enrique3_1(request.urlImg)
-    .then((data) => {
-        console.log("Enrique here 1");
-        //console.log(data); // JSON data parsed by `data.json()` call
-        gcpResults = data;
-    });
-    console.log(gcpResults);
+    try {
+        console.log('img_url_config2');
+        console.log(request.myMessage);
+        console.log(request.urlImg);
+        gcpResults = ""
+        // sendResponse({ status: "Enrique_Before_while2" });
+        // await sendResponse({ status: "Enrique_Before_while2" });
 
-    validation = gcpResults["responses"][0].hasOwnProperty('error');
-    //console.log(validation);
-    var imgAPP = document.getElementById("appImage");//.src="https://media.tenor.com/8zaFWYIWrMEAAAAC/black-wheel-red-arrow.gif";
-    console.log('imgAPP');
-    console.log(imgAPP);
-    //imgAPP.src = "https://media.tenor.com/8zaFWYIWrMEAAAAC/black-wheel-red-arrow.gif"
-    if(validation==true){
-        //console.log('Some issue');
-        var counter = 1;
-        while(validation==true){
-            console.log('in while: '+counter);
-            jsonGCPresponse = await enrique3_1(request.urlImg);
-            validation = jsonGCPresponse["responses"][0].hasOwnProperty('error');
-            console.log('Response with error: '+validation);
-            if(validation==false){
-                console.log("AQUI CABRION!");
-                break;
+        var jsonGCPresponse = await enrique3_1(request.urlImg)
+            .then((data) => {
+                console.log("Enrique here 1");
+                //console.log(data); // JSON data parsed by `data.json()` call
+                gcpResults = data;
+            });
+        //sendResponse({ status2: "Enrique_Before_while22" });
+        console.log(gcpResults);
+
+        validation = gcpResults["responses"][0].hasOwnProperty('error');
+        //console.log(validation);
+        var imgAPP = document.getElementById("appImage");//.src="https://media.tenor.com/8zaFWYIWrMEAAAAC/black-wheel-red-arrow.gif";
+        console.log('imgAPP');
+        console.log(imgAPP);
+        //imgAPP.src = "https://media.tenor.com/8zaFWYIWrMEAAAAC/black-wheel-red-arrow.gif"
+        if (validation == true) {
+            //console.log('Some issue');
+            var counter = 1;
+            while (validation == true) {
+                console.log('in while: ' + counter);
+                jsonGCPresponse = await enrique3_1(request.urlImg);
+                validation = jsonGCPresponse["responses"][0].hasOwnProperty('error');
+                console.log('Response with error: ' + validation);
+                if (validation == false) {
+                    console.log("AQUI CABRION!");
+                    break;
+                }
+                counter++;
             }
-            counter++;
+
+            //THIS IS YOUR RETuRN
+            //sendResponse({ status: "Enrique_Before_while2" });
+            console.log("Esto es lo que estamos pasando!");
+            console.log(jsonGCPresponse);
+            gcpResponse1_1 = jsonGCPresponse;
+            sendResponse({ status: "END_IMG_GET" });
+            console.log('End while');
+            //return jsonGCPresponse;
+            return true;
+        } else {
+            console.log('Not issue on the first call');
+            sendResponse({ status: "END_IMG_GET" });
         }
 
-        //THIS IS YOUR RETuRN
-        console.log("Esto es lo que estamos pasando!");
-        console.log(jsonGCPresponse);
-        gcpResponse1_1 = jsonGCPresponse;
-        console.log('End while');
-        //return jsonGCPresponse;
-    }else{
-        console.log('Not issue on the first call');
+    } catch (error) {
+        sendResponse({ status: "Error" });
     }
-
-    
-
 }
 
 
@@ -378,7 +389,7 @@ async function enrique3(url) {
 
 async function enrique3_1(url = '') {
     // Default options are marked with *
-    jsonBody = '{"requests":[{"image":{"source":{"imageUri":"' + url + '"}},"features":[{"type":"LABEL_DETECTION","maxResults":11},{"type":"IMAGE_PROPERTIES","maxResults":11}]}]}'
+    jsonBody = '{"requests":[{"image":{"source":{"imageUri":"' + url + '"}},"features":[{"type":"LABEL_DETECTION","maxResults":15},{"type":"IMAGE_PROPERTIES","maxResults":15}]}]}'
     const response = await fetch('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDUYrOx0r7spBBltBDthXu_zwWzk2LKUA4', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
