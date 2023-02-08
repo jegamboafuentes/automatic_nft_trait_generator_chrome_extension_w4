@@ -5,7 +5,7 @@ Here the official page [Chrome Extension project](https://metaverseprofessional.
 ## About the Project
 We've created a revolutionary Chrome Extension that will allow you to quickly and easily create traits for your NFTs using computer vision. Our extension makes it easier than ever to add unique traits to your NFTs, with just a few clicks.
 
-![alt text](https://raw.githubusercontent.com/jegamboafuentes/automatic_nft_trait_generator_chrome_extension_w4/main/nft%20trait%20generator%20extension/assets/project.png?token=GHSAT0AAAAAAB53H3DGQK6PHFX6276H5GJUY6RO6MA)
+![alt text](https://github.com/jegamboafuentes/automatic_nft_trait_generator_chrome_extension_w4/blob/main/nft%20trait%20generator%20extension/assets/project.png)
 
 ## Installation
 To use the Chrome extension, please follow the steps below:
