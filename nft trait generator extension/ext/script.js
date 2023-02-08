@@ -1,3 +1,20 @@
+//var initialImg = "../assets/project.png"
+//document.getElementById("appImage").src= initialImg
+
+var mainImg = ""
+
+chrome.storage.sync.get(/* String or Array */["imgURL","pText"], function(items){
+	//alert(items[0])
+	console.log("LOGGGGGIIINNNNGGG HERE")
+	console.log(items)
+	console.log(items.imgURL)
+	document.getElementById("appImage").src= items.imgURL;
+	document.getElementById("pStatus").innerHTML= items.pText
+	//console.log(items.some(item => item.name === 'imgURL'));
+	
+    //  items = [ { "yourBody": "myBody" } ]
+});
+
 document.getElementById("auto-fillProperties").addEventListener("click", () => {
 	/* Auto fill form */
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -51,15 +68,14 @@ document.getElementById("urlImgButton").addEventListener("click", () => {
 	/* Auto fill form */
 	console.log(document.getElementById('urlImgCheckValue').value);
 	document.getElementById("appImage").src="../assets/waitTIme.gif";
-	var newIMGURL = document.getElementById('urlImgCheckValue').value
+	console.log("Geting variable1")
+	var newIMGURL = document.getElementById('urlImgCheckValue').value;
+
 	document.getElementById("pStatus").innerHTML = "Getting image .. (This can take a minute)";
 	chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 		 chrome.tabs.sendMessage(tabs[0].id, {
 			myMessage: "urlImgButton",
 			urlImg: newIMGURL
-			//type: document.getElementById('type').value,
-			//name: document.getElementById('name').value
-
 
 		}, function (response) {
 			console.log('Here!');
