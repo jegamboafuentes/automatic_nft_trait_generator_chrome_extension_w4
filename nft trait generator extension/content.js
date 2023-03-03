@@ -1,4 +1,8 @@
-//gcpResponse1 = "{\r\n   \"Font\":77.10,\r\n   \"Art\":76.7,\r\n   \"Gas\":74.8,\r\n   \"Electric blue\":72.39999999999999,\r\n   \"Symbol\":70.5,\r\n   \"Logo\":67.9,\r\n   \"Cross\":64.60000000000001,\r\n   \"Brand\":63.2,\r\n   \"Signage\":62.2,\r\n   \"Sign\":62.2\r\n}"
+//Enrique note: 
+//This code controlls the back end of the extension
+//-GCP API CALL
+
+//gcpResponse1 = "{\r\n   \"Font\":77.10,\r\n   \"Art\":76.7,\r\n   \"Gas\":74.8,\r\n   \"Electric blue\":72.39999999999999,\n imager\n   \"Symbol\":70.5,\r\n   \"Logo\":67.9,\r\n   \"Cross\":64.60000000000001,\r\n   \"Brand\":63.2,\r\n   \"Signage\":62.2,\r\n   \"Sign\":62.2\r\n}"
 //gcpResponse1_1 = '{"responses":[{"labelAnnotations":[{"mid":"/m/0dnr7","description":"Textile","score":0.8754076,"topicality":0.8754076},{"mid":"/m/0jjw","description":"Art","score":0.79320127,"topicality":0.79320127},{"mid":"/m/0hwky","description":"Pattern","score":0.76035386,"topicality":0.76035386},{"mid":"/m/0p9xx","description":"Visual arts","score":0.6836929,"topicality":0.6836929},{"mid":"/m/0ckc5","description":"Magenta","score":0.68233865,"topicality":0.68233865},{"mid":"/m/081pkj","description":"Event","score":0.6461697,"topicality":0.6461697},{"mid":"/m/05qdh","description":"Painting","score":0.6254865,"topicality":0.6254865},{"mid":"/m/02csf","description":"Drawing","score":0.6236745,"topicality":0.6236745},{"mid":"/m/06y_bg","description":"Hindu temple","score":0.5757788,"topicality":0.5757788},{"mid":"/m/01kr8f","description":"Illustration","score":0.54011476,"topicality":0.54011476},{"mid":"/m/02h7lkt","description":"Fictional character","score":0.5019981,"topicality":0.5019981}]}]}'
 //gcpResponse1_1 = '{"responses":[{"labelAnnotations":[{"mid":"/m/0dnr7","description":"Textile","score":0.8754076,"topicality":0.8754076},{"mid":"/m/0jjw","description":"Art","score":0.79320127,"topicality":0.79320127},{"mid":"/m/0hwky","description":"Pattern","score":0.76035386,"topicality":0.76035386},{"mid":"/m/0p9xx","description":"Visual arts","score":0.6836929,"topicality":0.6836929},{"mid":"/m/0ckc5","description":"Magenta","score":0.68233865,"topicality":0.68233865},{"mid":"/m/081pkj","description":"Event","score":0.6461697,"topicality":0.6461697},{"mid":"/m/05qdh","description":"Painting","score":0.6254865,"topicality":0.6254865},{"mid":"/m/02csf","description":"Drawing","score":0.6236745,"topicality":0.6236745},{"mid":"/m/06y_bg","description":"Hindu temple","score":0.5757788,"topicality":0.5757788},{"mid":"/m/01kr8f","description":"Illustration","score":0.54011476,"topicality":0.54011476},{"mid":"/m/02h7lkt","description":"Fictional character","score":0.5019981,"topicality":0.5019981}],"imagePropertiesAnnotation":{"dominantColors":{"colors":[{"color":{"red":231,"green":230,"blue":232},"score":0.14724371,"pixelFraction":0.037633136},{"color":{"red":196,"green":196,"blue":196},"score":0.12077889,"pixelFraction":0.12390532},{"color":{"red":158,"green":156,"blue":156},"score":0.095004775,"pixelFraction":0.14982249},{"color":{"red":163,"green":156,"blue":129},"score":0.062406763,"pixelFraction":0.08852071},{"color":{"red":124,"green":120,"blue":120},"score":0.058162913,"pixelFraction":0.106390536},{"color":{"red":201,"green":232,"blue":226},"score":0.052365024,"pixelFraction":0.005266272},{"color":{"red":129,"green":120,"blue":94},"score":0.041761857,"pixelFraction":0.066331364},{"color":{"red":173,"green":204,"blue":196},"score":0.03636038,"pixelFraction":0.00739645},{"color":{"red":196,"green":192,"blue":166},"score":0.03320732,"pixelFraction":0.04035503},{"color":{"red":217,"green":187,"blue":200},"score":0.031605978,"pixelFraction":0.01183432}]}},"cropHintsAnnotation":{"cropHints":[{"boundingPoly":{"vertices":[{"x":125},{"x":405},{"x":405,"y":499},{"x":125,"y":499}]},"confidence":0.71875,"importanceFraction":0.85333335}]}}]}'
 //gcpResponse1_1 = '{"responses":[{"labelAnnotations":[{"mid":"/m/09nm_","description":"World","score":0.91916865,"topicality":0.91916865},{"mid":"/m/03gq5hm","description":"Font","score":0.84988856,"topicality":0.84988856},{"mid":"/m/0jjw","description":"Art","score":0.8284639,"topicality":0.8284639},{"mid":"/m/05_5t0l","description":"Landmark","score":0.79438037,"topicality":0.79438037},{"mid":"/m/0d9wj","description":"Urban design","score":0.7869585,"topicality":0.7869585},{"mid":"/m/01n32","description":"City","score":0.7541019,"topicality":0.7541019},{"mid":"/m/01kr8f","description":"Illustration","score":0.7178446,"topicality":0.7178446},{"mid":"/m/05qdh","description":"Painting","score":0.7042772,"topicality":0.7042772},{"mid":"/m/02cwm","description":"Design","score":0.6860201,"topicality":0.6860201},{"mid":"/m/02csf","description":"Drawing","score":0.6739092,"topicality":0.6739092},{"mid":"/m/021sdg","description":"Graphics","score":0.6399031,"topicality":0.6399031}],"imagePropertiesAnnotation":{"dominantColors":{"colors":[{"color":{"red":39,"green":56,"blue":24},"score":0.09314957,"pixelFraction":0.039635833},{"color":{"red":97,"green":87,"blue":36},"score":0.065566026,"pixelFraction":0.015240682},{"color":{"red":10,"green":17,"blue":4},"score":0.03869305,"pixelFraction":0.060510036},{"color":{"red":184,"green":201,"blue":167},"score":0.019995837,"pixelFraction":0.022835873},{"color":{"red":238,"green":179,"blue":98},"score":0.0021283163,"pixelFraction":0.00035209497},{"color":{"red":16,"green":32,"blue":6},"score":0.065126985,"pixelFraction":0.026708918},{"color":{"red":72,"green":87,"blue":52},"score":0.06335014,"pixelFraction":0.03088376},{"color":{"red":128,"green":116,"blue":62},"score":0.060484495,"pixelFraction":0.01679996},{"color":{"red":25,"green":100,"blue":57},"score":0.035763185,"pixelFraction":0.0043760375},{"color":{"red":53,"green":50,"blue":18},"score":0.03342261,"pixelFraction":0.028368793}]}},"cropHintsAnnotation":{"cropHints":[{"boundingPoly":{"vertices":[{"x":110},{"x":522},{"x":522,"y":735},{"x":110,"y":735}]},"confidence":0.78125,"importanceFraction":0.7791305}]}}]}';
@@ -20,17 +24,21 @@
 gcpResponse1_1 = '{"responses":[{"labelAnnotations":[{"mid":"/m/03hl4l9","description":"NO IMG SELECTED","score":0.8966519,"topicality":0.8966519}],"imagePropertiesAnnotation":{"dominantColors":{"colors":[{"color":{"red":75,"green":76,"blue":172},"score":0.23022044,"pixelFraction":0.014345874}]}},"cropHintsAnnotation":{"cropHints":[{"boundingPoly":{"vertices":[{"x":135},{"x":641},{"x":641,"y":903},{"x":135,"y":903}]},"confidence":0.80343187,"importanceFraction":0.9326317}]}}]}'
 
 
-//FRONT CONTROLLER
+//INITIAL PART
+//LOAD INITIAL IMAGE
 if (JSON.parse(gcpResponse1_1)["responses"][0].labelAnnotations[0].description == "NO IMG SELECTED"){
-    console.log("buildspace1");
-    chrome.storage.sync.set({ "imgURL": "../assets/project.png", "pText":"Load an image"}, function(){
+    console.log("NO DATA on gcpResponse1_1");
+    chrome.storage.sync.set({ "imgURL": "../assets/project.png", "pText":"Load NFT (right click on image)"}, function(){
         //  A data saved callback omg so fancy
     });
     
 }else{
-    console.log("buildspace2");
+    console.log("DATA on gcpResponse1_1");
 }
 
+
+
+//LISTENER 'listening' for messages from the client
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
         console.log(request.myMessage);
@@ -72,6 +80,7 @@ chrome.runtime.onMessage.addListener(
     }
 );
 
+//Inject into 'properties' of OpenSea
 function openSeaProperties(gcpResponse1_1, request, sender, sendResponse) {
     try {
         var t = document.querySelector('table');
@@ -113,6 +122,7 @@ function openSeaProperties(gcpResponse1_1, request, sender, sendResponse) {
     }
 }
 
+//Inject into 'levels' of OpenSea
 function openSeaLevels(gcpResponse1_1, request, sender, sendResponse) {
     try {
         var t = document.querySelector('table');
@@ -163,6 +173,7 @@ function openSeaLevels(gcpResponse1_1, request, sender, sendResponse) {
     }
 }
 
+//Inject into 'Stats' of OpenSea
 function openSeaStats(gcpResponse1_1, request, sender, sendResponse) {
     try {
         var t = document.querySelector('table');
@@ -235,11 +246,13 @@ function openSeaStats(gcpResponse1_1, request, sender, sendResponse) {
     }
 }
 
+//Part of inject into 'properties' of OpenSea
 function componentToHex(c) {
     var hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
 }
 
+//Part of inject into 'properties' of OpenSea
 function rgbToHex(r, g, b) {
     console.log("#" + componentToHex(r) + componentToHex(g) + componentToHex(b))
     return "colorRatio:#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
@@ -310,70 +323,6 @@ async function img_url_config2(request, sender, sendResponse) {
 
     } catch (error) {
         sendResponse({ status: "Error" });
-    }
-}
-
-
-gcpResponseStatus = 3;
-async function img_url_config(gcpResponse1_1, request, sender, sendResponse) {
-    try {
-        //console.log(gcpResponse1_1);
-        console.log(request.myMessage);
-        console.log(request.urlImg);
-        // var gettingDataBack = false;
-        // while (gettingDataBack = false){
-        //     var jsonGCPresponse = enrique3_1(request.urlImg)
-        //     .then((data) => {
-        //         console.log(data); // JSON data parsed by `data.json()` call
-        //         console.log(data["responses"][0].error.code);
-        //         if(data["responses"][0].error.code=3){
-        //             gettingDataBack = false;
-        //         }else{
-        //             gettingDataBack = true;
-        //         }
-        //     });
-        // }
-        var jsonGCPresponse = await enrique3_1(request.urlImg)
-            .then((data) => {
-                console.log("Enrique here 1");
-                console.log(data); // JSON data parsed by `data.json()` call
-                try {
-                    console.log("Enrique here 5");
-                    console.log(data["responses"][0].error.code);
-                    gcpResponseStatus = data["responses"][0].error.code
-                } catch (error) {
-                    console.log("Enrique here 6");
-                    gcpResponseStatus = 1;
-                    jsonGCPresponse = data;
-                }
-
-            });
-
-        if (gcpResponseStatus == 3 || gcpResponseStatus == 8) {
-            jsonGCPresponse = await enrique3_1(request.urlImg)
-                .then((data) => {
-                    console.log("Enrique here 2");
-                    console.log(data); // JSON data parsed by `data.json()` call
-                    console.log(data["responses"][0].error.code);
-                    gcpResponseStatus = data["responses"][0].error.code
-                    if (gcpResponseStatus == 3 || gcpResponseStatus == 8) {
-                        console.log("Enrique here 3");
-                        jsonGCPresponse = enrique3_1(request.urlImg);
-                    } else {
-                        console.log("Enrique here 4");
-                        jsonGCPresponse = data["responses"][0];
-                        //fetchNow();
-                    }
-                });
-        }
-
-        //const jsonParsed = JSON.parse(jsonGCPresponse);
-        console.log('final LOG')
-        console.log(jsonGCPresponse);
-        sendResponse({ status: "Success!" });
-    } catch (error) {
-        console.log(error)
-        sendResponse({ status: "Exception occurred!" });
     }
 }
 

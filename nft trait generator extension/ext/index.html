@@ -10,68 +10,77 @@
         <h3 class="float-md-start mb-0" style="text-align: center; margin: 20px;">Automatic NFT trait generator</h3>
     </header>
 
-    <div style="text-align: center; margin-top: 70px; margin-bottom:10px">
-
-        <img alt="projectLogo" id="appImage" width="66" height="66">
-        <p id="pStatus">Load Image</p>
-    </div>
-
-    <p>IMG URL:</p>
-    <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <div class="input-group-text">
-                <input type="checkbox" id="urlImgCheck" name="urlImgCheck"
-                    aria-label="Checkbox for following text input" checked>
-            </div>
-        </div>
-        <input id="urlImgCheckValue" type="text" class="form-control" aria-label="Text input with checkbox"
-            value="https://i.seadn.io/gae/ASS8U5tQVrdwpKzeSRZCoho7oxhFnIHjDjXygRDNsDvPPmhaTE4bGDd7wHYPXqtXmZkAFhPmnLoxKOv00Kcjybpkdr-qtv9FlvvZVFo?auto=format&w=1920">
-        <button class="btn btn-primary" id="urlImgButton">Save</button>
-    </div>
-    <hr>
-
     <div style="margin-top: 50px; margin-left: 10px; margin-right: 10px;">
+        <div style="text-align: center; margin-top: 70px; margin-bottom:10px">
+
+            <img alt="projectLogo" id="appImage" width="66" height="66">
+            <h6 id="pStatus">Load Image</h6>
+        </div>
         <!-- Buttons -->
         <div style="text-align: center; margin-top: 70px; margin-bottom:10px">
             <!-- Auto fill Properties -->
             <!-- Properties -->
             <!-- <h4 class="float-md-start mb-0" style="text-align: center; margin: 20px;">OpenSea</h4> -->
             <img src="../assets/OpenSea-Full-Logo-Dark.png" alt="openseaLogo" height="66">
-            <br>
             <button class="btn btn-info" id="auto-fillProperties">Properties</button>
             <!-- Levels -->
             <button class="btn btn-info" id="auto-fillLevels">Levels</button>
             <!-- Stats -->
             <button class="btn btn-info" id="auto-fillStats">Stats</button>
         </div>
+        <hr>
+        <h5>Configurations</h5>
+        <h6>IMG URL</h6>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" id="urlImgCheck" name="urlImgCheck"
+                        aria-label="Checkbox for following text input" checked>
+                </div>
+            </div>
+            <input id="urlImgCheckValue" type="text" class="form-control" aria-label="Text input with checkbox"
+                value="https://i.seadn.io/gae/ASS8U5tQVrdwpKzeSRZCoho7oxhFnIHjDjXygRDNsDvPPmhaTE4bGDd7wHYPXqtXmZkAFhPmnLoxKOv00Kcjybpkdr-qtv9FlvvZVFo?auto=format&w=1920">
+            <button class="btn btn-primary" id="urlImgButton">Load</button>
+        </div>
+        <hr>
+
+
 
 
         <!-- Input fields -->
-        <p>Custom fields:</p>
-        <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text text-primary" id="inputGroup-sizing-sm">Custom 1</span>
-            <input type="text" id="custom1Key" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm" value="Artist">
-        </div>
+        <h6>Custom properties</h6>
+        <input type="checkbox" id="configProperties" name="configProperties"
+            aria-label="Checkbox for following text input" checked>
+        <div id="customFieldsDiv">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text text-primary" id="custom1Key_label">Type 1</span>
+                <input type="text" id="custom1Key" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" value="Artist">
+            </div>
 
-        <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text text-info" id="inputGroup-sizing-sm">Custom value 1</span>
-            <input type="text" id="custom1Val" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm" value="Metaverse Professional">
-        </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text text-info" id="custom1Val_label">Name 1</span>
+                <input type="text" id="custom1Val" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" value="Metaverse Professional">
+            </div>
 
-        <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text text-primary" id="inputGroup-sizing-sm">Custom 2</span>
-            <input type="text" id="custom2Key" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm" value="AI_MODEL">
-        </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text text-primary" id="inputGroup-sizing-sm">Type 2</span>
+                <input type="text" id="custom2Key" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" value="AI_MODEL">
+            </div>
 
-        <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text text-info" id="inputGroup-sizing-sm">Custom 2 value 2</span>
-            <input type="text" id="custom2Val" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm" value="Vqgan+clip">
-        </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text text-info" id="inputGroup-sizing-sm">Name 2</span>
+                <input type="text" id="custom2Val" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" value="Vqgan+clip">
+            </div>
 
+            <!-- Add this in the future -->
+            <!-- <button class="btn btn-secondary" id="urlImgButton">+</button>
+            <button class="btn btn-secondary" id="urlImgButton">-</button>
+            <button class="btn btn-primary" id="urlImgButton">save</button> -->
+        </div>
         <div style="margin: 10px; color: white">
             <br>
 
