@@ -1,6 +1,7 @@
 <html style="height: 300px; width: 400px">
 
 <head>
+    <meta charset='UTF-8' />
     <link rel="stylesheet" href="../libs/bootstrap-5.1.1-dist/css/bootstrap.min.css">
     <!-- <script src="script.js"></script> -->
 </head>
@@ -10,14 +11,38 @@
         <h3 class="float-md-start mb-0" style="text-align: center; margin: 20px;">Automatic NFT trait generator</h3>
     </header>
 
-    <div style="margin-top: 50px; margin-left: 10px; margin-right: 10px;">
-        <div style="text-align: center; margin-top: 70px; margin-bottom:10px">
+    <div style="text-align: center; margin-top: 50px; margin-left: 77px; margin-right: 10px;">
+        <div>
+            <p style="font-size: 1.2rem;">NFTs available to analyze: <p style="font-size: 2rem;"></p><p id="extPayMessage" style="font-size: 2rem;"></p></p>
+            <div>
+                <table class="center">
+                    <thead>
+                        <tr>
+                            <th class="tg-0lax">5 NFTs</th>
+                            <th class="tg-0lax">30 NFTs</th>
+                            <!-- <th class="tg-0lax">100 NFTs</th> -->
+                            <th class="tg-0lax"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-0lax"><button class="btn btn-dark" id="extPayTrial">Trial</button></td>
+                            <td class="tg-0lax"><button class="btn btn-dark" id="extPayTierOne">$3.99</button></td>
+                            <!-- <td class="tg-0lax"><button class="btn btn-dark" id="extPayTierTwo">$9.99</button></td> -->
+                            <!-- <td class="tg-0lax"><button class="btn btn-dark" id="extPayTierlogin">login</button></td> -->
+                        </tr>
+                    </tbody>
+                </table>       
+            </div>
+
+        </div>
+        <div style="text-align: center; margin-top: 40px; margin-bottom:10px">
 
             <img alt="projectLogo" id="appImage" width="66" height="66">
             <h6 id="pStatus">Load Image</h6>
         </div>
         <!-- Buttons -->
-        <div style="text-align: center; margin-top: 70px; margin-bottom:10px">
+        <div style="text-align: center; margin-top: 40px; margin-bottom:10px">
             <!-- Auto fill Properties -->
             <!-- Properties -->
             <!-- <h4 class="float-md-start mb-0" style="text-align: center; margin: 20px;">OpenSea</h4> -->
@@ -85,7 +110,7 @@
             <br>
 
         </div>
-
+        <script src="../libs/ExtPay.js"></script>
         <script src="script.js"></script>
 </body>
 

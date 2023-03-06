@@ -44,3 +44,36 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.contextMenus.onClicked.addListener(getword)
+
+
+
+// // Extension Pay *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+//3/3/23
+
+
+// importScripts('./ExtPay.js')
+
+// importScripts('./ExtPay.js') // or `import` / `require` if using a bundler
+
+// import './ExtPay.js';
+
+// (async () => {
+//     const src = chrome.extension.getURL('./ExtPay.js');
+//     const contentScript = await import(src);
+//     contentScript.main();
+//   })();
+
+//  var extpay = ExtPay('sample-extension'); // Careful! See note below
+//  extpay.startBackground(); 
+
+// extpay.getUser().then(user => {
+//     if (user.paid) {
+//         console.log("PAID")
+//         // ...
+//     } else {
+//         console.log("NOT PAID")
+//         // ...
+//     }
+// })
+
+

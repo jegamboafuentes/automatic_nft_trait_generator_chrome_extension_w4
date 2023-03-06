@@ -258,7 +258,7 @@ function rgbToHex(r, g, b) {
     return "colorRatio:#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-async function img_url_config2(request, sender, sendResponse) {
+async function img_url_config2(request, sender, sendResponse) { //This function calls GCP VISION API until success
     try {
         console.log('img_url_config2');
         console.log(request.myMessage);
@@ -299,7 +299,8 @@ async function img_url_config2(request, sender, sendResponse) {
                 }
                 counter++;
             }
-            chrome.storage.sync.set({ "imgURL": request.urlImg ,"pText":"Asset loaded"}, function(){
+            var myCredit = await substractCredit(1);
+            chrome.storage.sync.set({ "imgURL": request.urlImg ,"pText":"Asset loaded","credits":myCredit}, function(){
                 //  A data saved callback omg so fancy
             });
 
@@ -315,7 +316,8 @@ async function img_url_config2(request, sender, sendResponse) {
         } else {
             console.log('Not issue on the first call');
             gcpResponse1_1 = jsonGCPresponse;
-            chrome.storage.sync.set({ "imgURL": request.urlImg,"pText":"Asset loaded" }, function(){
+            var myCredit = await substractCredit(1);
+            chrome.storage.sync.set({ "imgURL": request.urlImg ,"pText":"Asset loaded","credits":myCredit}, function(){
                 //  A data saved callback omg so fancy
             });
             sendResponse({ status: "END_IMG_GET" });
@@ -324,6 +326,20 @@ async function img_url_config2(request, sender, sendResponse) {
     } catch (error) {
         sendResponse({ status: "Error" });
     }
+}
+
+//3/5/2023 Decrease credit after API CALL
+async function substractCredit(n){
+    console.log("substract credits credits")
+    var myCreditIN
+    await chrome.storage.sync.get(["credits"]).then((result) => {
+        //console.log(result);
+        console.log("BATO current credit: " + result.credits);
+        myCreditIN = result.credits
+      });
+      myCreditIN = myCreditIN - n; 
+    console.log("BATO credit now: " + myCreditIN);
+    return myCreditIN;
 }
 
 //-------------
@@ -399,3 +415,20 @@ async function enrique3_1(url = '') {
 //     .then((data) => {
 //         console.log(data); // JSON data parsed by `data.json()` call
 //     });
+
+// // Extension Pay *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+// importScripts('ExtPay.js') // or `import` / `require` if using a bundler
+// console.log("PAIDDDD")
+// var extpay = ExtPay('sample-extension'); // Careful! See note below
+// extpay.startBackground(); 
+
+// extpay.getUser().then(user => {
+//     if (user.paid) {
+//         console.log("PAID")
+//         // ...
+//     } else {
+//         console.log("NOT PAID")
+//         // ...
+//     }
+// })

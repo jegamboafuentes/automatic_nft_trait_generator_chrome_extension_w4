@@ -1,7 +1,7 @@
 //Enrique note: 
 //This code controlls the extension client side
 
-//var initialImg = "../assets/project.png"
+var initialImg = "../assets/project.png"
 //document.getElementById("appImage").src= initialImg
 
 var mainImg = ""
@@ -12,17 +12,55 @@ document.getElementById("configProperties").checked = false;
 check_uncheck_IMGURL(document.getElementById("urlImgCheck").checked)
 check_uncheck_Properties(document.getElementById("configProperties").checked)
 
-chrome.storage.sync.get(/* String or Array */["imgURL","pText"], function(items){
+var firstTime = false
+
+chrome.storage.sync.get(/* String or Array */["imgURL","pText","credits"], function(items){
 	//alert(items[0])
 	console.log("LOGGGGGIIINNNNGGG HERE")
 	console.log(items)
 	console.log(items.imgURL)
 	document.getElementById("appImage").src= items.imgURL;
-	document.getElementById("pStatus").innerHTML= items.pText
+	document.getElementById("pStatus").innerHTML= items.pText;
+	if (items.credits === undefined) {
+		console.log("This is undefined");
+		firstTime = true
+		firstTimeUser()
+		document.getElementById("extPayMessage").innerHTML = "🪙 "+ 0;
+	}else{
+		document.getElementById("extPayMessage").innerHTML = "🪙 "+items.credits;
+		firstTime = false
+	}
+	
+	console.log("Credits:")
+	console.log(items.credits)
+	hasMoney(items.credits);
 	//console.log(items.some(item => item.name === 'imgURL'));
     //  items = [ { "yourBody": "myBody" } ]
 });
 
+async function firstTimeUser(){
+	chrome.storage.sync.set({ "credits": 0 }, function(){
+		//  A data saved callback omg so fancy
+	});
+}
+
+function hasMoney(credits){
+	if(credits<=0){
+		console.log("doesntHasMoney")
+		document.getElementById("auto-fillLevels").disabled = true
+		document.getElementById("auto-fillStats").disabled = true
+		chrome.storage.sync.set({ "pText": "You are broke! 📉 add credit to continue" }, function(){
+			//  A data saved callback omg so fancy
+		});
+		chrome.storage.sync.set({ "imgURL": "../assets/broken.png" }, function(){
+			//  A data saved callback omg so fancy
+		});
+	}else{
+		console.log("HasMoney")
+		document.getElementById("auto-fillLevels").disabled = false
+		document.getElementById("auto-fillStats").disabled = false
+	}
+}
 
 
 //Click on Properties button 
@@ -147,6 +185,113 @@ if (inputCheckValidation==true) {
 		document.getElementById("customFieldsDiv").style.display = 'none';
 		}
 }
+
+// // Extension Pay *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+//3/3/2023
+// importScripts('ExtPay.js') // or `import` / `require` if using a bundler
+//importScripts('ExtPay.js')
+
+// To test payments, replace 'sample-extension' with the ID of
+// the extension you registered on ExtensionPay.com. You may
+// need to uninstall and reinstall the extension.
+// And don't forget to change the ID in popup.js too!
+var extpayT1 = ExtPay('automatic-nft-trait-generator');
+var credits = 0
+chrome.storage.sync.get(["credits"], function(items){
+	credits = items.credits
+});
+// chrome.storage.sync.get(["credits"], function(items){
+// 	console.log("items")
+// 	console.log(items)
+// 	credits = items.credits
+// });
+var trialStarted = false
+
+
+extpayT1.startBackground(); // this line is required to use ExtPay in the rest of your extension
+
+extpayT1.getUser().then(user => {
+	console.log("user")
+	console.log(user)
+	if (user.trialStartedAt!=null || user.paid==true) {
+		document.getElementById("extPayMessage").innerHTML = "🪙 "+credits;
+		document.getElementById("extPayTrial").disabled = true
+		//freeTrialCredits();
+		//extpay.openPaymentPage()
+        // ...
+		//document.getElementById("extPayMessage").innerHTML = "👁️ NFT's available to analyze: "+credits;
+
+    } else {
+        
+    }
+})
+
+function addCredits(n){
+	console.log("credits")
+	credits = credits + n;
+	console.log(credits)
+	document.getElementById("extPayTrial").disabled = true
+	document.getElementById("extPayMessage").innerHTML = "🪙 "+credits;
+	chrome.storage.sync.set({ "credits": credits }, function(){
+		//  A data saved callback omg so fancy
+	});
+}
+
+
+
+// function minusCredit(n){
+// 	credits = credits - n;
+// 	document.getElementById("extPayMessage").innerHTML = credits;
+// 	chrome.storage.sync.set({ "credits": credits }, function(){
+// 		//  A data saved callback omg so fancy
+// 	});
+// }
+
+//3/4/23
+// Click on extPat FREE  button
+document.getElementById("extPayTrial").addEventListener("click", () => {
+	/* Auto fill form */
+	extpayT1.openTrialPage("5 NFT's");
+});
+
+extpayT1.onTrialStarted.addListener(user => {
+    console.log('User Trial');
+	addCredits(5);
+	//freeTrialCredits(5)
+})
+
+// Click on extPat T1 $4.99  button
+document.getElementById("extPayTierOne").addEventListener("click", () => {
+	/* Auto fill form */
+	extpayT1.openPaymentPage();
+});
+
+extpayT1.onPaid.addListener(user => {
+    console.log('user paid!')
+	addCredits(30);
+})
+
+// Click on extPat T2 $9.99  button
+// document.getElementById("extPayTierTwo").addEventListener("click", () => {
+// 	/* Auto fill form */
+// 	extpayT2.openPaymentPage();
+// });
+
+// Click on Login
+// document.getElementById("extPayTierlogin").addEventListener("click", () => {
+// 	/* Auto fill form */
+// 	extpayT1.openLoginPage();
+// });
+
+// extpay.getUser().then(user => {
+//     if (user.paid) {
+//         console.log("PAID")
+//         // ...
+//     } else {
+//         console.log("NOT PAID")
+//         // ...
+//     }
+// })
 
 // var checkbox = document.getElementById("urlImgCheck");
 // checkbox.addEventListener('change', () => {

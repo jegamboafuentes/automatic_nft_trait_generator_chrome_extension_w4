@@ -8,10 +8,10 @@
         "72": "assets/72.png",
         "96": "assets/96.png",
         "144": "assets/144.png"
-      },
+    },
     "background": {
         "service_worker": "welcome/background.js",
-        "type":"module"
+        "type": "module"
     },
     "action": {
         "default_popup": "ext/index.html"
@@ -19,10 +19,20 @@
     "content_scripts": [
         {
             "matches": [
+                "https://extensionpay.com/*"
+            ],
+            "js": [
+                "./libs/ExtPay.js"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "matches": [
                 "http://*/*",
                 "https://*/*"
             ],
             "js": [
+                "./libs/ExtPay.js",
                 "content.js"
             ]
         }
