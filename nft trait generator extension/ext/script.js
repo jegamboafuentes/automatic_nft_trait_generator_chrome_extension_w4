@@ -267,6 +267,9 @@ document.getElementById("extPayTierOne").addEventListener("click", () => {
 });
 
 extpayT1.onPaid.addListener(user => {
+	//console.log("Paymentuser")
+	//console.log(user)
+	//user.paid = false
     console.log('user paid!')
 	addCredits(30);
 })
